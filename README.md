@@ -158,4 +158,4 @@ This project is proprietary and confidential. Unauthorized copying, distribution
 
 StarnumX Technology - [@starnumx](https://twitter.com/starnumx) - starnumx@gmail.com
 
-Project Link: [https://github.com/your-username/starnumx](https://github.com/your-username/starnumx)
+Project Link: [https://github.com/lordkign2/starnumx](https://github.com/your-username/starnumx)
