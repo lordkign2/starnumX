@@ -36,8 +36,8 @@ export default function ProductsPage() {
   return (
     <main className="relative min-h-screen bg-gray-950 text-white py-20 px-6 md:px-16 overflow-hidden">
       {/* Decorative background layers */}
-      <div className="absolute inset-0 opacity-5 bg-[url('/svgs/tech-pattern.svg')] bg-cover bg-center pointer-events-none" />
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 via-gray-950 to-black/90 pointer-events-none" />
+      <div className="absolute inset-0 opacity-5 bg-[url('/images/tech-pattern.jpg')] bg-cover bg-center pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-gray-900/20 via-gray-950 to-black/90 pointer-events-none" /> */}
 
       {/* Page Header */}
       <div className="relative text-center mb-16 z-10">

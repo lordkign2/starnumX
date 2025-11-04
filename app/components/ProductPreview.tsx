@@ -57,11 +57,8 @@ export default function ProductPreview() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-950 to-black text-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/images/tech-pattern.svg')] opacity-5 bg-cover"></div>
-      <div className="relative z-10">
-        <h2 className="text-4xl font-bold text-orange-500 mb-8">Our <span className="text-white">Innovative</span> Products</h2>
-      </div>
+    <section className="py-20 bg-black text-center">
+      <h2 className="text-4xl font-bold text-orange-500 mb-8">Our Products</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
         {sampleProducts.map((p) => (
           <ProductCard key={p.id} product={p} onClick={setSelectedProduct} />

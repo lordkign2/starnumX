@@ -16,7 +16,7 @@ export default function ProductCard({ product, onClick }: Props) {
       whileHover={{ y: -8, boxShadow: '0 0 30px rgba(249,115,22,0.4)' }}
       transition={{ type: 'spring', stiffness: 200 }}
       onClick={() => onClick(product)}
-      className="cursor-pointer bg-gradient-to-br from-gray-900/60 to-gray-950/60 border border-gray-800 rounded-2xl p-4 shadow-lg hover:shadow-orange-500/30 transition-all duration-300 group"
+      className="cursor-pointer bg-gradient-to-br from-gray-900/60 to-gray-950/60 border border-gray-800 rounded-2xl p-4 shadow-lg hover:shadow-orange-500/30 transition-all duration-300 "
     >
       <div className="overflow-hidden rounded-xl mb-4">
         <Image
