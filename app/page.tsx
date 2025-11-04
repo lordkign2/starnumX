@@ -1,31 +1,68 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import AboutPreview from "./components/AboutPreview";
 import ServicesSection from "./components/ServiceSection";
 import ProductPreview from "./components/ProductPreview";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <main className="bg-gray-950 text-white">
       {/* 🌐 Navbar */}
       <header className="flex items-center justify-between px-6 md:px-16 py-6 bg-gray-950 border-b border-gray-800 sticky top-0 z-50">
-        <Link href="/" className="text-2xl font-bold text-orange-500">StarnumX</Link>
-        <nav className="hidden md:flex space-x-8 text-gray-300">
-          <Link href="/" className="hover:text-orange-500 transition">Home</Link>
-          <Link href="/about" className="hover:text-orange-500 transition">About</Link>
-          <Link href="/services" className="hover:text-orange-500 transition">Services</Link>
-          <Link href="/contact" className="hover:text-orange-500 transition">Contact</Link>
-        </nav>
-        <Link
-          href="/contact"
-          className="hidden md:inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-full transition"
-        >
-          Get in Touch
-        </Link>
-      </header>
+      {/* Logo */}
+      <Link href="/" className="text-2xl font-bold text-orange-500">
+        StarnumX
+      </Link>
+
+      {/* Desktop Menu */}
+      <nav className="hidden md:flex space-x-8 text-gray-300">
+        <Link href="/" className="hover:text-orange-500 transition">Home</Link>
+        <Link href="/about" className="hover:text-orange-500 transition">About</Link>
+        <Link href="/services" className="hover:text-orange-500 transition">Services</Link>
+        <Link href="/contact" className="hover:text-orange-500 transition">Contact</Link>
+      </nav>
+
+      {/* Desktop Button */}
+      <Link
+        href="/contact"
+        className="hidden md:inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-full transition"
+      >
+        Get in Touch
+      </Link>
+
+      {/* Mobile Menu Button */}
+      <button
+        onClick={() => setMenuOpen(!menuOpen)}
+        className="md:hidden text-gray-300 focus:outline-none"
+      >
+        {menuOpen ? <X size={28} /> : <Menu size={28} />}
+      </button>
+
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <div className="absolute top-full left-0 w-full bg-gray-950 border-t border-gray-800 md:hidden animate-slideDown">
+          <nav className="flex flex-col items-center py-4 space-y-4 text-gray-300">
+            <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 transition">Home</Link>
+            <Link href="/about" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 transition">About</Link>
+            <Link href="/services" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 transition">Services</Link>
+            <Link href="/contact" onClick={() => setMenuOpen(false)} className="hover:text-orange-500 transition">Contact</Link>
+            <Link
+              href="/contact"
+              onClick={() => setMenuOpen(false)}
+              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-full transition"
+            >
+              Get in Touch
+            </Link>
+          </nav>
+        </div>
+      )}
+    </header>
 
      {/* 🦾 Hero Section with Video Background */}
       <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-6 md:px-16 overflow-hidden">
