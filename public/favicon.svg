@@ -1,0 +1,12 @@
+<!-- save as: public/favicon-monogram-star.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#0B1E39"/>
+  <g transform="translate(70,72)">
+    <!-- Star accent -->
+    <polygon points="320,0 334,52 390,60 350,98 360,154 320,126 280,154 290,98 250,60 306,52"
+      fill="#FF4B2B" opacity="0.95"/>
+    <!-- Monogram SX -->
+    <text x="28" y="330" font-family="Poppins,Inter,Roboto,Arial" font-weight="700" font-size="260" fill="#F8FAFC">S</text>
+    <text x="180" y="330" font-family="Poppins,Inter,Roboto,Arial" font-weight="700" font-size="260" fill="#FF4B2B">X</text>
+  </g>
+</svg>
